@@ -71,4 +71,9 @@ public class SupervisorRepository {
             }
         }
     }
+
+    public Supervisor insertSupervisor(Supervisor supervisor){
+        supervisorList.add(supervisor);
+        return supervisor;
+    }
 }

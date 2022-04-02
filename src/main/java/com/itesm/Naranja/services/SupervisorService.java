@@ -1,5 +1,6 @@
 package com.itesm.Naranja.services;
 
+import com.itesm.Naranja.models.Agente;
 import com.itesm.Naranja.models.Supervisor;
 import com.itesm.Naranja.repositories.SupervisorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,7 @@ public class SupervisorService {
         return supervisorRepository.findSupervisorByID(ID);
     }
 
-    public Supervisor insertar(Supervisor supervisor){
-        //personaRepository.insert();
-        return supervisor;
+    public Supervisor insertSupervisor(Supervisor supervisor){
+        return supervisorRepository.insertSupervisor(supervisor);
     }
 }

@@ -1,5 +1,6 @@
 package com.itesm.Naranja.controllers;
 
+import com.itesm.Naranja.models.Agente;
 import com.itesm.Naranja.models.Supervisor;
 import com.itesm.Naranja.services.SupervisorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class SupervisorController {
 
     @PostMapping("/save")
     public Supervisor save(@RequestBody Supervisor supervisor){
-        supervisorService.insertar(supervisor);
+        supervisorService.insertSupervisor(supervisor);
         return supervisor;
     }
 }
