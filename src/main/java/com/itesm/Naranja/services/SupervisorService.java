@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class SupervisorService {
-    //@Autowired
+    @Autowired
     SupervisorRepository supervisorRepository;
 
     public List<Supervisor> getAllSupervisors(){

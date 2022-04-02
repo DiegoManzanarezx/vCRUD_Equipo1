@@ -2,12 +2,13 @@ package com.itesm.Naranja.repositories;
 
 import com.itesm.Naranja.models.Agente;
 import com.itesm.Naranja.models.Supervisor;
+import org.springframework.stereotype.Repository;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Repository
 public class SupervisorRepository {
 
     public static List<Agente> supervisorAgents = new ArrayList<>();
