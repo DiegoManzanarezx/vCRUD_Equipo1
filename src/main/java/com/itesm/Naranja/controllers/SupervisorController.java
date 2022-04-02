@@ -45,9 +45,9 @@ public class SupervisorController {
         return supervisorService.getSupervisorByID(ID);
     }
 
-    
+
     @RequestMapping(
-            value = "/v1/supervisor/allSupervisors",
+            value = "/v1/supervisor/save",
             method = RequestMethod.POST,
             produces = "application/json"
     )
