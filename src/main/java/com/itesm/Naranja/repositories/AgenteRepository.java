@@ -26,10 +26,12 @@ public class AgenteRepository {
 
 
     public List<Agente> findAllAgents(){
+        createAgents();
         return agentList;
     }
 
     public Agente findAgentByID(String agentID){
+        createAgents();
         for(int i = 0; i < agentList.size(); ++i){
             if(agentList.get(i).getAgentID().equalsIgnoreCase(agentID)){
                 return agentList.get(i);
@@ -40,7 +42,7 @@ public class AgenteRepository {
     }
 
     public Agente updateAgentName(String agentID, String newName){
-
+        createAgents();
         for(int i = 0; i < agentList.size(); ++i) {
             if (agentList.get(i).getAgentID().equalsIgnoreCase(agentID)) {
                 agentList.get(i).setAgentName(newName);
@@ -52,7 +54,7 @@ public class AgenteRepository {
     }
 
     public void deleteAgent(String agentID){
-
+        createAgents();
         for(int i = 0; i < agentList.size(); ++i) {
             if (agentList.get(i).getAgentID().equalsIgnoreCase(agentID)) {
                 agentList.remove(agentList.get(i));
