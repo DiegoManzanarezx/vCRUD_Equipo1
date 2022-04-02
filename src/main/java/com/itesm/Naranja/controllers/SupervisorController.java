@@ -9,28 +9,50 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/supervisor")
+
 public class SupervisorController {
     @Autowired
     SupervisorService supervisorService;
 
-    @GetMapping("/allSupervisors")
+
+    @RequestMapping(
+            value = "/v1/supervisor/allSupervisors",
+            method = RequestMethod.GET,
+            consumes = "application/json",
+            produces = "application/json"
+    )
     public List<Supervisor> getAllAgents(){
         return supervisorService.getAllSupervisors();
     }
 
-    @GetMapping("/update")
+    @RequestMapping(
+            value = "/v1/supervisor/update",
+            method = RequestMethod.GET,
+            consumes = "application/json",
+            produces = "application/json"
+    )
     public void updateSupervisorName(){
     }
 
-    @GetMapping("/searchByID")
+    @RequestMapping(
+            value = "/v1/supervisor/searchByID",
+            method = RequestMethod.GET,
+            consumes = "application/json",
+            produces = "application/json"
+    )
     public Supervisor getSupervisorByID(String ID){
         return supervisorService.getSupervisorByID(ID);
     }
 
-    @PostMapping("/save")
+    @RequestMapping(
+            value = "/v1/supervisor/allSupervisors",
+            method = RequestMethod.POST,
+            consumes = "application/json",
+            produces = "application/json"
+    )
     public Supervisor save(@RequestBody Supervisor supervisor){
         supervisorService.insertSupervisor(supervisor);
+        System.out.println(supervisor.toString());
         return supervisor;
     }
 }
