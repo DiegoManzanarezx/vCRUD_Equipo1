@@ -1,7 +1,6 @@
 package com.itesm.Naranja.services;
 
 import com.itesm.Naranja.models.Agente;
-import com.itesm.Naranja.models.Persona;
 import com.itesm.Naranja.repositories.AgenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
