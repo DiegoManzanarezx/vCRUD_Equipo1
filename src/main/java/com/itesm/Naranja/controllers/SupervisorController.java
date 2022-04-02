@@ -14,42 +14,44 @@ public class SupervisorController {
     @Autowired
     SupervisorService supervisorService;
 
-
     @RequestMapping(
             value = "/v1/supervisor/allSupervisors",
             method = RequestMethod.GET,
-            consumes = {"application/json"},
             produces = "application/json"
     )
+    @ResponseBody
     public List<Supervisor> getAllSupervisors(){
         return supervisorService.getAllSupervisors();
     }
 
+
     @RequestMapping(
             value = "/v1/supervisor/update",
             method = RequestMethod.GET,
-            consumes = {"application/json"},
             produces = "application/json"
     )
+    @ResponseBody
     public void updateSupervisorName(){
     }
+
 
     @RequestMapping(
             value = "/v1/supervisor/searchByID",
             method = RequestMethod.GET,
-            consumes = {"application/json"},
             produces = "application/json"
     )
+    @ResponseBody
     public Supervisor getSupervisorByID(String ID){
         return supervisorService.getSupervisorByID(ID);
     }
 
+    
     @RequestMapping(
             value = "/v1/supervisor/allSupervisors",
             method = RequestMethod.POST,
-            consumes = {"application/json"},
             produces = "application/json"
     )
+    @ResponseBody
     public Supervisor save(@RequestBody Supervisor supervisor){
         supervisorService.insertSupervisor(supervisor);
         System.out.println(supervisor.toString());
