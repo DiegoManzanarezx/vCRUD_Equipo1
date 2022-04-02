@@ -5,6 +5,7 @@ import com.itesm.Naranja.services.AgenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -17,6 +18,15 @@ public class AgenteController {
     @GetMapping("/allAgents")
     public List<Agente> getAllAgents(){
         return agenteService.getAllAgents();
+    }
+
+    @GetMapping("/update")
+    public void updateAgentName(){
+    }
+
+    @GetMapping("/searchByID")
+    public Agente getAgentByID(String ID){
+        return agenteService.getAgentByID(ID);
     }
 
     @PostMapping("/save")

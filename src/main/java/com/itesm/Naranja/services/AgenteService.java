@@ -17,6 +17,10 @@ public class AgenteService {
         return agenteRepository.findAllAgents();
     }
 
+    public Agente getAgentByID(String ID){
+        return agenteRepository.findAgentByID(ID);
+    }
+
     public Agente insertar(Agente agente){
         //personaRepository.insert();
         return agente;
