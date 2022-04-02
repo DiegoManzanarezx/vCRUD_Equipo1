@@ -18,17 +18,17 @@ public class SupervisorController {
     @RequestMapping(
             value = "/v1/supervisor/allSupervisors",
             method = RequestMethod.GET,
-            consumes = "application/json",
+            consumes = {"application/json"},
             produces = "application/json"
     )
-    public List<Supervisor> getAllAgents(){
+    public List<Supervisor> getAllSupervisors(){
         return supervisorService.getAllSupervisors();
     }
 
     @RequestMapping(
             value = "/v1/supervisor/update",
             method = RequestMethod.GET,
-            consumes = "application/json",
+            consumes = {"application/json"},
             produces = "application/json"
     )
     public void updateSupervisorName(){
@@ -37,7 +37,7 @@ public class SupervisorController {
     @RequestMapping(
             value = "/v1/supervisor/searchByID",
             method = RequestMethod.GET,
-            consumes = "application/json",
+            consumes = {"application/json"},
             produces = "application/json"
     )
     public Supervisor getSupervisorByID(String ID){
@@ -47,7 +47,7 @@ public class SupervisorController {
     @RequestMapping(
             value = "/v1/supervisor/allSupervisors",
             method = RequestMethod.POST,
-            consumes = "application/json",
+            consumes = {"application/json"},
             produces = "application/json"
     )
     public Supervisor save(@RequestBody Supervisor supervisor){
