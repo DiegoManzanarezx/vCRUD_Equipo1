@@ -52,7 +52,7 @@ public class SupervisorController {
             produces = "application/json"
     )
     @ResponseBody
-    public Supervisor save(@RequestBody Supervisor supervisor){
+    public Supervisor save(Supervisor supervisor){
         supervisorService.insertSupervisor(supervisor);
         System.out.println(supervisor.toString());
         return supervisor;
