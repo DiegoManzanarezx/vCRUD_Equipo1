@@ -23,14 +23,14 @@ public class AgenteRepository {
         agente1.setAgentEmployeeNum(99);
         agentList.add(agente1);
         Agente agente2 = new Agente();
-        agente1.setAgentID("33ZCX");
-        agente1.setAgentEmail("Diego@tec.mx");
-        agente1.setAgentName("Diego Manzanarez");
-        agente1.setAgentPassword("bntF2432");
-        agente1.setAgentRole("agent");
-        agente1.setAgentSuccessfulTickets(3);
-        agente1.setAgentUnsuccessfulTickets(9);
-        agente1.setAgentEmployeeNum(96);
+        agente2.setAgentID("33ZCX");
+        agente2.setAgentEmail("Diego@tec.mx");
+        agente2.setAgentName("Diego Manzanarez");
+        agente2.setAgentPassword("bntF2432");
+        agente2.setAgentRole("agent");
+        agente2.setAgentSuccessfulTickets(3);
+        agente2.setAgentUnsuccessfulTickets(9);
+        agente2.setAgentEmployeeNum(96);
         agentList.add(agente2);
 
     }
