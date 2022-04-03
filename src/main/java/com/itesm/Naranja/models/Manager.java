@@ -1,4 +1,4 @@
-package com.itesm.Naranja.models;
+/*package com.itesm.Naranja.models;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -22,3 +22,5 @@ public class Manager {
 
 
 }
+
+ */

@@ -1,3 +1,4 @@
+/*
 package com.itesm.Naranja.repositories;
 
 import com.itesm.Naranja.models.Agente;
@@ -77,4 +78,4 @@ public class ManagerRepository {
         return manager;
     }
 }
-
+*/

@@ -1,3 +1,4 @@
+/*
 package com.itesm.Naranja.services;
 
 import com.itesm.Naranja.models.Manager;
@@ -24,3 +25,4 @@ public class ManagerService {
         return managerRepository.insertManager(manager);
     }
 }
+*/
