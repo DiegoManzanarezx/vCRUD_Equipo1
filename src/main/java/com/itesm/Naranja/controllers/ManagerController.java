@@ -1,4 +1,4 @@
-/*package com.itesm.Naranja.controllers;
+package com.itesm.Naranja.controllers;
 
 import com.itesm.Naranja.models.Manager;
 import com.itesm.Naranja.services.ManagerService;
@@ -57,4 +57,3 @@ public class ManagerController {
         return manager;
     }
 }
- */

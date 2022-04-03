@@ -1,13 +1,14 @@
-/*
 package com.itesm.Naranja.repositories;
 
 import com.itesm.Naranja.models.Agente;
 import com.itesm.Naranja.models.Supervisor;
 import com.itesm.Naranja.models.Manager;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ManagerRepository {
     public static List<Supervisor> managerSupervisors = new ArrayList<>();
     public static List<Agente> managerAgents = new ArrayList<>();
@@ -17,22 +18,22 @@ public class ManagerRepository {
         Manager manager1 = Manager.builder()
                 .managerName("Alex Flores")
                 .managerEmail("aflores@outlook.com")
-                .managerID("AE1123")
-                .managerRole("Supervisor")
-                .managerPassword("Diego123")
-                .managerEmployeeNum(123456789)
-                .managerAgentList(managerAgents)
-                .managerSupervisorsList(managerSupervisors)
+                .managerID("x1")
+                .managerRole("Manager")
+                .managerPassword("xMx")
+                .managerEmployeeNum(1)
+                .agentList((Agente) managerAgents)
+                .supervisorList((Supervisor) managerSupervisors)
                 .build();
         Manager manager2 = Manager.builder()
-                .managerName("Javier Hernandez")
-                .managerEmail("javh@gmail.com")
-                .managerID("3245RZSX")
-                .managerRole("Supervisor")
-                .managerPassword("JVM32")
+                .managerName("Andrea Jimenez")
+                .managerEmail("jandrea@gmail.com")
+                .managerID("3C5")
+                .managerRole("Manager")
+                .managerPassword("x9zserty")
                 .managerEmployeeNum(987654321)
-                .managerAgentList(managerAgents)
-                .managerSupervisorsList(managerSupervisors)
+                .agentList((Agente) managerAgents)
+                .supervisorList((Supervisor) managerSupervisors)
                 .build();
         managerList.add(manager1);
         managerList.add(manager2);
@@ -78,4 +79,4 @@ public class ManagerRepository {
         return manager;
     }
 }
-*/
+

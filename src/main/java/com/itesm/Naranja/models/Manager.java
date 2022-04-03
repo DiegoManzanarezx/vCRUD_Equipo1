@@ -1,4 +1,4 @@
-/*package com.itesm.Naranja.models;
+package com.itesm.Naranja.models;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -17,10 +17,9 @@ public class Manager {
     private String managerEmail;
     private String managerPassword;
     private int managerEmployeeNum;
-    private List<Supervisor> managerSupervisorsList;
-    private List<Agente> managerAgentList;
+    @Singular("supervisorList") private List<Supervisor> managerSupervisorsList;
+    @Singular("agentList") private List<Agente> managerAgentsList;
 
 
 }
 
- */
