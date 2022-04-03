@@ -45,7 +45,7 @@ public class ManagerRepository {
         return managerList;
     }
 
-    public Manager findManagerByID(String managerID){
+    public Manager findManagerByID(@PathVariable("managerID") String managerID){
         for(int i = 0; i < managerList.size(); ++i){
             if(managerList.get(i).getManagerID().equalsIgnoreCase(managerID)){
                 return managerList.get(i);

@@ -54,7 +54,6 @@ public class ManagerController {
     @ResponseBody
     public Manager save(@RequestBody Manager manager){
         managerService.insertManager(manager);
-        System.out.println(manager.toString());
         return manager;
     }
 

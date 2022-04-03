@@ -17,7 +17,7 @@ public class ManagerService {
         return managerRepository.findAllManagers();
     }
 
-    public Manager getManagerByID(String ID){
+    public Manager getManagerByID(@PathVariable("ID") String ID){
         return managerRepository.findManagerByID(ID);
     }
 
