@@ -25,22 +25,23 @@ public class ManagerController {
 
 
     @RequestMapping(
-            value = "/v1/manager/update",
-            method = RequestMethod.GET,
+            value = "/v1/manager/update/{ID}/{newName}",
+            method = RequestMethod.PUT,
             produces = "application/json"
     )
     @ResponseBody
-    public void updateManagerName(){
+    public Manager updateManagerName(@PathVariable("ID") String ID, @PathVariable("newName") String newName){
+        return managerService.updateManagerName(ID, newName);
     }
 
 
     @RequestMapping(
-            value = "/v1/manager/searchByID",
+            value = "/v1/manager/searchByID/{ID}",
             method = RequestMethod.GET,
             produces = "application/json"
     )
     @ResponseBody
-    public Manager getManagerByID(String ID){
+    public Manager getManagerByID(@PathVariable("ID") String ID){
         return managerService.getManagerByID(ID);
     }
 

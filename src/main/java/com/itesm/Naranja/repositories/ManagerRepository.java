@@ -5,6 +5,7 @@ import com.itesm.Naranja.models.Supervisor;
 import com.itesm.Naranja.models.Manager;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +54,7 @@ public class ManagerRepository {
         return null;
     }
 
-    public Manager updateManagerName(String managerID, String newName){
+    public Manager updateManagerName(@PathVariable("managerID") String managerID, @PathVariable("newName") String newName){
         for(int i = 0; i < managerList.size(); ++i) {
             if (managerList.get(i).getManagerID().equalsIgnoreCase(managerID)) {
                 managerList.get(i).setManagerName(newName);

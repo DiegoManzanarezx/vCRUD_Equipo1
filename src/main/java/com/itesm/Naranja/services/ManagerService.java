@@ -28,4 +28,8 @@ public class ManagerService {
     public Manager deleteManager(@PathVariable("ID") String ID){
         return managerRepository.deleteManager(ID);
     }
+
+    public Manager updateManagerName(@PathVariable("ID") String ID, @PathVariable("newName") String newName){
+        return managerRepository.updateManagerName(ID, newName);
+    }
 }
