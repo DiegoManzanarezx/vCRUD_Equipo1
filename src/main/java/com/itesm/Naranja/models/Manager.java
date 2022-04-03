@@ -17,9 +17,6 @@ public class Manager {
     private String managerEmail;
     private String managerPassword;
     private int managerEmployeeNum;
-    @Singular("supervisorList") private List<Supervisor> managerSupervisorsList;
-    @Singular("agentList") private List<Agente> managerAgentsList;
-
 
 }
 

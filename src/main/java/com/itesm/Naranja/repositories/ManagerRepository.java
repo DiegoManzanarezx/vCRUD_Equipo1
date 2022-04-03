@@ -22,8 +22,6 @@ public class ManagerRepository {
                 .managerRole("Manager")
                 .managerPassword("xMx")
                 .managerEmployeeNum(1)
-                .agentList((Agente) managerAgents)
-                .supervisorList((Supervisor) managerSupervisors)
                 .build();
         Manager manager2 = Manager.builder()
                 .managerName("Andrea Jimenez")
@@ -32,8 +30,6 @@ public class ManagerRepository {
                 .managerRole("Manager")
                 .managerPassword("x9zserty")
                 .managerEmployeeNum(987654321)
-                .agentList((Agente) managerAgents)
-                .supervisorList((Supervisor) managerSupervisors)
                 .build();
         managerList.add(manager1);
         managerList.add(manager2);

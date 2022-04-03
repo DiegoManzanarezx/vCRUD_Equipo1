@@ -25,7 +25,7 @@ public class ManagerController {
 
 
     @RequestMapping(
-            value = "/v1/managers/update",
+            value = "/v1/manager/update",
             method = RequestMethod.GET,
             produces = "application/json"
     )
@@ -35,7 +35,7 @@ public class ManagerController {
 
 
     @RequestMapping(
-            value = "/v1/managers/searchByID",
+            value = "/v1/manager/searchByID",
             method = RequestMethod.GET,
             produces = "application/json"
     )
@@ -46,7 +46,7 @@ public class ManagerController {
 
 
     @RequestMapping(
-            value = "/v1/managers/save",
+            value = "/v1/manager/save",
             method = RequestMethod.POST,
             produces = "application/json"
     )
