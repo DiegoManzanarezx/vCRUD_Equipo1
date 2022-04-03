@@ -1,8 +1,10 @@
 package com.itesm.Naranja.repositories;
 
 import com.itesm.Naranja.models.Agente;
+import com.itesm.Naranja.models.Manager;
 import com.itesm.Naranja.models.Supervisor;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
 
 
 import java.util.ArrayList;
@@ -45,7 +47,7 @@ public class SupervisorRepository {
         return supervisorList;
     }
 
-    public Supervisor findSupervisorByID(String supervisorID){
+    public Supervisor findSupervisorByID(@PathVariable("supervisorID") String supervisorID){
         for(int i = 0; i < supervisorList.size(); ++i){
             if(supervisorList.get(i).getSupervisorID().equalsIgnoreCase(supervisorID)){
                 return supervisorList.get(i);
@@ -54,7 +56,7 @@ public class SupervisorRepository {
         return null;
     }
 
-    public Supervisor updateSupervisorName(String supervisorID, String newName){
+    public Supervisor updateSupervisorName(@PathVariable("supervisorID") String supervisorID, @PathVariable("newName") String newName){
         for(int i = 0; i < supervisorList.size(); ++i) {
             if (supervisorList.get(i).getSupervisorID().equalsIgnoreCase(supervisorID)) {
                 supervisorList.get(i).setSupervisorName(newName);
@@ -64,12 +66,14 @@ public class SupervisorRepository {
         return null;
     }
 
-    public void deleteSupervisor(String agentID){
+    public Supervisor deleteSupervisor(@PathVariable("supervisorID") String supervisorID){
         for(int i = 0; i < supervisorList.size(); ++i) {
-            if (supervisorList.get(i).getSupervisorID().equalsIgnoreCase(agentID)) {
+            if (supervisorList.get(i).getSupervisorID().equalsIgnoreCase(supervisorID)) {
                 supervisorList.remove(supervisorList.get(i));
             }
         }
+
+        return null;
     }
 
     public Supervisor insertSupervisor(Supervisor supervisor){

@@ -26,22 +26,23 @@ public class SupervisorController {
 
 
     @RequestMapping(
-            value = "/v1/supervisor/update",
-            method = RequestMethod.GET,
+            value = "/v1/supervisor/update/{ID}/{newName}",
+            method = RequestMethod.PUT,
             produces = "application/json"
     )
     @ResponseBody
-    public void updateSupervisorName(){
+    public Supervisor updateSupervisorName(@PathVariable("ID") String ID, @PathVariable("newName") String newName){
+        return supervisorService.updateSupervisorName(ID, newName);
     }
 
 
     @RequestMapping(
-            value = "/v1/supervisor/searchByID",
+            value = "/v1/supervisor/searchByID/{ID}",
             method = RequestMethod.GET,
             produces = "application/json"
     )
     @ResponseBody
-    public Supervisor getSupervisorByID(String ID){
+    public Supervisor getSupervisorByID(@PathVariable("ID") String ID){
         return supervisorService.getSupervisorByID(ID);
     }
 
@@ -54,7 +55,17 @@ public class SupervisorController {
     @ResponseBody
     public Supervisor save(@RequestBody Supervisor supervisor){
         supervisorService.insertSupervisor(supervisor);
-        System.out.println(supervisor.toString());
         return supervisor;
+    }
+
+
+    @RequestMapping(
+            value = "/v1/supervisor/delete/{ID}",
+            method = RequestMethod.DELETE,
+            produces = "application/json"
+    )
+    @ResponseBody
+    public void deleteSupervisor(@PathVariable("ID") String ID){
+        supervisorService.deleteSupervisor(ID);
     }
 }
