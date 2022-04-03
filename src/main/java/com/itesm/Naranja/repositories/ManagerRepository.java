@@ -4,6 +4,7 @@ import com.itesm.Naranja.models.Agente;
 import com.itesm.Naranja.models.Supervisor;
 import com.itesm.Naranja.models.Manager;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +63,7 @@ public class ManagerRepository {
         return null;
     }
 
-    public Manager deleteManager(String managerID){
+    public Manager deleteManager(@PathVariable("managerID") String managerID){
         for(int i = 0; i < managerList.size(); ++i) {
             if (managerList.get(i).getManagerID().equalsIgnoreCase(managerID)) {
                 managerList.remove(managerList.get(i));

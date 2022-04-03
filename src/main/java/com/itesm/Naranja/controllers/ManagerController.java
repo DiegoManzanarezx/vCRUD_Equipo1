@@ -59,12 +59,12 @@ public class ManagerController {
 
 
     @RequestMapping(
-            value = "/v1/manager/delete",
+            value = "/v1/manager/delete/{ID}",
             method = RequestMethod.DELETE,
             produces = "application/json"
     )
     @ResponseBody
-    public void deleteManager(String ID){
+    public void deleteManager(@PathVariable("ID") String ID){
         managerService.deleteManager(ID);
     }
 }

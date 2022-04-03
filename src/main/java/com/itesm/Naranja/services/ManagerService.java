@@ -4,6 +4,7 @@ import com.itesm.Naranja.models.Manager;
 import com.itesm.Naranja.repositories.ManagerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class ManagerService {
         return managerRepository.insertManager(manager);
     }
 
-    public Manager deleteManager(String ID){
+    public Manager deleteManager(@PathVariable("ID") String ID){
         return managerRepository.deleteManager(ID);
     }
 }
