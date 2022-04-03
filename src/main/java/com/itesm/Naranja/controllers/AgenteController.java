@@ -53,13 +53,13 @@ public class AgenteController {
             produces = "application/json"
     )
     @ResponseBody
-    public Agente save(@RequestBody Agente agente){
-        agenteService.insertAgent(agente);
-        return agente;
+    public Agente save(@RequestBody Agente agent){
+        agenteService.insertAgent(agent);
+        return agent;
     }
 
     @RequestMapping(
-            value = "/v1/supervisor/delete/{ID}",
+            value = "/v1/agent/delete/{ID}",
             method = RequestMethod.DELETE,
             produces = "application/json"
     )
