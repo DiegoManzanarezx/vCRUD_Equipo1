@@ -23,4 +23,8 @@ public class ManagerService {
     public Manager insertManager(Manager manager){
         return managerRepository.insertManager(manager);
     }
+
+    public Manager deleteManager(String ID){
+        return managerRepository.deleteManager(ID);
+    }
 }

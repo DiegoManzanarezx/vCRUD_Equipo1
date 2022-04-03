@@ -56,4 +56,15 @@ public class ManagerController {
         System.out.println(manager.toString());
         return manager;
     }
+
+
+    @RequestMapping(
+            value = "/v1/manager/delete",
+            method = RequestMethod.DELETE,
+            produces = "application/json"
+    )
+    @ResponseBody
+    public void deleteManager(String ID){
+        managerService.deleteManager(ID);
+    }
 }

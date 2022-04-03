@@ -62,12 +62,14 @@ public class ManagerRepository {
         return null;
     }
 
-    public void deleteManager(String agentID){
+    public Manager deleteManager(String managerID){
         for(int i = 0; i < managerList.size(); ++i) {
-            if (managerList.get(i).getManagerID().equalsIgnoreCase(agentID)) {
+            if (managerList.get(i).getManagerID().equalsIgnoreCase(managerID)) {
                 managerList.remove(managerList.get(i));
             }
         }
+
+        return null;
     }
 
     public Manager insertManager(Manager manager){
