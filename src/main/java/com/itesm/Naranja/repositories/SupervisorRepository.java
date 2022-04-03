@@ -72,7 +72,6 @@ public class SupervisorRepository {
                 supervisorList.remove(supervisorList.get(i));
             }
         }
-
         return null;
     }
 

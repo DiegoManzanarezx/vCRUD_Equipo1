@@ -9,30 +9,62 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/agente")
-public class AgenteController {
 
+public class AgenteController {
     @Autowired
     AgenteService agenteService;
 
-    @GetMapping("/allAgents")
+    @RequestMapping(
+            value = "/v1/agent/allAgents",
+            method = RequestMethod.GET,
+            produces = "application/json"
+    )
+    @ResponseBody
     public List<Agente> getAllAgents(){
         return agenteService.getAllAgents();
     }
 
-    @GetMapping("/update")
-    public void updateAgentName(){
+
+    @RequestMapping(
+            value = "/v1/agent/update/{ID}/{newName}",
+            method = RequestMethod.PUT,
+            produces = "application/json"
+    )
+    @ResponseBody
+    public Agente updateAgentName(@PathVariable("ID") String ID, @PathVariable("newName") String newName){
+        return agenteService.updateAgentName(ID, newName);
     }
 
-    @GetMapping("/searchByID")
-    public Agente getAgentByID(String ID){
+
+    @RequestMapping(
+            value = "/v1/agent/searchByID/{ID}",
+            method = RequestMethod.GET,
+            produces = "application/json"
+    )
+    @ResponseBody
+    public Agente getAgentByID(@PathVariable("ID") String ID){
         return agenteService.getAgentByID(ID);
     }
 
-    @PostMapping("/save")
+
+    @RequestMapping(
+            value = "/v1/agent/save",
+            method = RequestMethod.POST,
+            produces = "application/json"
+    )
+    @ResponseBody
     public Agente save(@RequestBody Agente agente){
-        agenteService.insertar(agente);
+        agenteService.insertAgent(agente);
         return agente;
     }
 
+    @RequestMapping(
+            value = "/v1/supervisor/delete/{ID}",
+            method = RequestMethod.DELETE,
+            produces = "application/json"
+    )
+    @ResponseBody
+    public void deleteAgent(@PathVariable("ID") String ID){
+        agenteService.deleteAgent(ID);
+    }
 }
