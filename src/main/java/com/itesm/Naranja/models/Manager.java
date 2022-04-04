@@ -19,6 +19,8 @@ public class Manager {
     private int managerEmployeeNum;
     @Singular private List<Agente> managerAssignedAgents;
     @Singular private List<Supervisor> managerAssignedSupervisors;
-
 }
+
+
+
 

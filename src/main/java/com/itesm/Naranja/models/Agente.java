@@ -20,3 +20,6 @@ public class Agente {
     private int agentUnsuccessfulTickets;
     private int agentSuccessfulTickets;
 }
+
+
+
